@@ -20,9 +20,9 @@
     <main>
       <div class="block-timer">
         <div class="timer">
-          <p class="minutes">00</p>
+          <p id="minutes" class="minutes">00</p>
           <p>:</p>
-          <p class="seconds">00</p>
+          <p id="seconds" class="seconds">00</p>
         </div>
         <div class="timer-buttons">
           <button class="playPause-button">
@@ -31,10 +31,10 @@
           <button class="stop-button">
             <img src="./assets/stop.svg" alt="stop button svg image" />
           </button>
-          <button class="plus-button">
+          <button id="plus-button" class="plus-button">
             <img src="./assets/plus.svg" alt="plus button svg image" />
           </button>
-          <button class="minus-button">
+          <button id="minus-button" class="minus-button">
             <img src="./assets/minus.svg" alt="minus button svg image" />
           </button>
         </div>
@@ -54,5 +54,6 @@
         </button>
       </div>
     </main>
+    <script src="./index.js"></script>
   </body>
 </html>
