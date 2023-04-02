@@ -1,43 +1,33 @@
-const plusButton = document.querySelector("#plus-button");
-const minusButton = document.querySelector("#minus-button");
-const seconds = document.querySelector("#seconds");
-const minutes = document.querySelector("#minutes");
+import { minusSecond, plusSecond } from "./changeSeconds.js";
+import { plusMinutes, minusMinutes } from "./changeMinutes.js";
 
-function plusSecond() {
-  const currentSeconds = parseInt(seconds.textContent);
-  let newSeconds = currentSeconds + 10;
+export const plusButton = document.querySelector("#plus-button");
+export const minusButton = document.querySelector("#minus-button");
+const checkbox = document.querySelector("#switch-time");
+let stateCheckbox = true;
 
-  if (newSeconds >= 60) {
-    const currentMinutes = parseInt(minutes.textContent);
-    const newMinutes = currentMinutes + 1;
-    minutes.textContent = newMinutes.toString().padStart(2, "0")
-
-    newSeconds = 0;
+checkbox.addEventListener("change", function () {
+  if (this.checked) {
+    stateCheckbox = false;
+  } else {
+    stateCheckbox = true;
   }
-  seconds.textContent = newSeconds.toString().padStart(2, "0")
-}
+});
 
-function minusSecond() {
-  const currentSeconds = parseInt(seconds.textContent);
-  let currentMinutes = parseInt(minutes.textContent)
+plusButton.addEventListener("click", () => {
+  if (stateCheckbox == false) {
+    plusSecond();
+  } else {
+    plusMinutes();
+  }
+});
 
-    if(currentSeconds === 0 && currentMinutes === 0){
-        return;
-    }
+minusButton.addEventListener("click", () => {
+  if (stateCheckbox == false) {
+    minusSecond();
+  } else {
+    minusMinutes();
+  }
+});
 
-  let newSeconds = currentSeconds - 10;
-  seconds.textContent = newSeconds.toString().padStart(2, "0")
 
-  if (newSeconds < 0) {
-    newSeconds = 50
-
-    if (currentMinutes > 0 ){
-        currentMinutes--;
-        minutes.textContent = currentMinutes.toString().padStart(2, "0")
-    }
-  } 
-  seconds.textContent = newSeconds.toString().padStart(2, "0")
-}
-
-plusButton.addEventListener("click", plusSecond);
-minusButton.addEventListener("click", minusSecond);
