@@ -1,3 +1,4 @@
+
 export const seconds = document.querySelector("#seconds");
 export const minutes = document.querySelector("#minutes");
 
@@ -36,4 +37,3 @@ export function minusSecond() {
   }
   seconds.textContent = newSeconds.toString().padStart(2, "0");
 }
-

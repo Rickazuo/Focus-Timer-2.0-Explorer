@@ -138,11 +138,38 @@ input:checked + .slider:before {
   width: 138px;
   height: 152px;
 
-  background: var(--unselected);
   border-radius: 24px;
   border: transparent;
 
   cursor: pointer;
+}
+
+.wood-sound {
+  background: var(--unselected);
+}
+
+.rain-sound {
+  background: var(--unselected);
+}
+
+.town-sound {
+  background: var(--unselected);
+}
+
+.fire-sound {
+  background: var(--unselected);
+}
+
+.selected-music {
+  background: var(--selected);
+}
+
+#default-button {
+  display: initial;
+}
+
+#selected-button {
+  display: none;
 }
 
 @media only screen and (max-width: 950px) {

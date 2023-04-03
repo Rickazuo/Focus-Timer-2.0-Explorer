@@ -1,6 +1,7 @@
 import { minutes, seconds } from "./changeSeconds.js";
 
 let timerInterval;
+let audio
 
 export function toggleTimer() {
   if (
@@ -30,6 +31,8 @@ export function decreaseTimer() {
   let currentMinutes = parseInt(minutes.textContent);
 
   if (currentMinutes === 0 && currentSeconds === 0) {
+    audio = new Audio("./assets/alarm.mp3");
+    audio.play();
     clearInterval(timerInterval);
     return;
   }

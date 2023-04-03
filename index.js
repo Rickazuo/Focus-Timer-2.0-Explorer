@@ -1,12 +1,14 @@
 import { minusSecond, plusSecond } from "./changeSeconds.js";
 import { plusMinutes, minusMinutes } from "./changeMinutes.js";
 import { toggleTimer, resetTimer } from "./playPauseStop.js";
+import "./buttonsSound.js"
 
 const plusButton = document.querySelector("#plus-button");
 const minusButton = document.querySelector("#minus-button");
 const decreaseTime = document.querySelector("#playPause-button");
 const stopButton = document.querySelector("#stop-button");
 const checkbox = document.querySelector("#switch-time");
+
 let stateCheckbox = true;
 
 checkbox.addEventListener("change", function () {
@@ -35,3 +37,5 @@ minusButton.addEventListener("click", () => {
 
 decreaseTime.addEventListener("click", toggleTimer);
 stopButton.addEventListener("click", resetTimer);
+
+
