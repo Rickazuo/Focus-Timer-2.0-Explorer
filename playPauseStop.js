@@ -1,7 +1,16 @@
 import { minutes, seconds } from "./changeSeconds.js";
 
 let timerInterval;
-let audio
+let audio;
+const volumeSliders = document.querySelectorAll(".volume-slider");
+const audioElement = new Audio("./assets/alarm.mp3");
+
+volumeSliders.forEach((slider) => {
+  slider.addEventListener("change", (event) => {
+    const volume = event.target.value / 100;
+    audioElement.volume = volume;
+  });
+});
 
 export function toggleTimer() {
   if (
@@ -31,8 +40,7 @@ export function decreaseTimer() {
   let currentMinutes = parseInt(minutes.textContent);
 
   if (currentMinutes === 0 && currentSeconds === 0) {
-    audio = new Audio("./assets/alarm.mp3");
-    audio.play();
+    audioElement.play();
     clearInterval(timerInterval);
     return;
   }

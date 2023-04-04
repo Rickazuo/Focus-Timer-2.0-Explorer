@@ -210,6 +210,25 @@ input:checked + .slider:before {
   background: var(--selected);
 }
 
+.volume-slider {
+  margin-top: 1.625rem;
+  appearance: none;
+  background: var(--background);
+  border-radius: 1.3125rem;
+  height: 0.425rem;
+
+  cursor: pointer;
+}
+
+.volume-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 50%;
+  background-color: var(--line);
+  cursor: pointer;
+}
+
 .p-change-theme {
   color: var(--background);
 }
