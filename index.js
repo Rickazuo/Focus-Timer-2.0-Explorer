@@ -2,6 +2,7 @@ import { minusSecond, plusSecond } from "./changeSeconds.js";
 import { plusMinutes, minusMinutes } from "./changeMinutes.js";
 import { toggleTimer, resetTimer } from "./playPauseStop.js";
 import "./buttonsSound.js"
+import "./backgroundTheme.js"
 
 const plusButton = document.querySelector("#plus-button");
 const minusButton = document.querySelector("#minus-button");

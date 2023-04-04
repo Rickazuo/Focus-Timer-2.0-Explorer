@@ -16,7 +16,11 @@
 
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
+  <body id="body">
+    <button class="button-theme">
+      <img id="light-theme" src="./assets/lightThem.svg" alt="sun icon" />
+      <img id="dark-theme" src="./assets/darkTheme.svg" alt="sun icon" />
+    </button>
     <main>
       <div class="block-timer">
         <div class="switch-wrapper">
@@ -34,16 +38,52 @@
         </div>
         <div class="timer-buttons">
           <button id="playPause-button" class="playPause-button">
-            <img src="./assets/play.svg" alt="play button svg image" />
+            <img
+              class="standard-control-button"
+              src="./assets/play.svg"
+              alt="play button svg image"
+            />
+            <img
+              class="change-control-button"
+              src="./assets/playWhite.svg"
+              alt="play button svg image"
+            />
           </button>
           <button id="stop-button" class="stop-button">
-            <img src="./assets/stop.svg" alt="stop button svg image" />
+            <img
+              class="standard-control-button"
+              src="./assets/stop.svg"
+              alt="stop button svg image"
+            />
+            <img
+              class="change-control-button"
+              src="./assets/stopWhite.svg"
+              alt="stop button svg image"
+            />
           </button>
           <button id="plus-button" class="plus-button">
-            <img src="./assets/plus.svg" alt="plus button svg image" />
+            <img
+              class="standard-control-button"
+              src="./assets/plus.svg"
+              alt="plus button svg image"
+            />
+            <img
+              class="change-control-button"
+              src="./assets/plusWhite.svg"
+              alt="plus button svg image"
+            />
           </button>
           <button id="minus-button" class="minus-button">
-            <img src="./assets/minus.svg" alt="minus button svg image" />
+            <img
+              class="standard-control-button"
+              src="./assets/minus.svg"
+              alt="minus button svg image"
+            />
+            <img
+              class="change-control-button"
+              src="./assets/minusWhite.svg"
+              alt="minus button svg image"
+            />
           </button>
         </div>
       </div>
@@ -53,11 +93,13 @@
             id="default-button"
             src="./assets/woods.svg"
             alt="woods button svg image"
+            class="default-button"
           />
           <img
             id="selected-button"
             src="./assets/woodsSelected.svg"
             alt="woods button svg image"
+            class="selected-button"
           />
         </button>
         <button class="rain-sound">
@@ -65,11 +107,13 @@
             id="default-button"
             src="./assets/rain.svg"
             alt="rain button svg image"
+            class="default-button"
           />
           <img
             id="selected-button"
             src="./assets/rainSelected.svg"
             alt="rain button svg image"
+            class="selected-button"
           />
         </button>
         <button class="town-sound">
@@ -77,11 +121,13 @@
             id="default-button"
             src="./assets/town.svg"
             alt="town button svg image"
+            class="default-button"
           />
           <img
             id="selected-button"
             src="./assets/townSelected.svg"
             alt="town button svg image"
+            class="selected-button"
           />
         </button>
         <button class="fire-sound">
@@ -89,11 +135,13 @@
             id="default-button"
             src="./assets/fire.svg"
             alt="fire button svg image"
+            class="default-button"
           />
           <img
             id="selected-button"
             src="./assets/fireSelected.svg"
             alt="fire button svg image"
+            class="selected-button"
           />
         </button>
       </div>

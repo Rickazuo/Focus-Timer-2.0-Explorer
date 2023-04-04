@@ -19,9 +19,19 @@ body {
 
   display: flex;
   justify-content: center;
+
+  transition: background-color 1s ease-in-out;
+}
+
+.change-color {
+  background-color: #000000;
+  transition: background-color 1s ease-in-out;
+  border-radius: 50%;
+  animation-fill-mode: forwards;
 }
 
 main {
+  position: relative;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -29,6 +39,34 @@ main {
   margin: 0 auto;
 
   gap: 12rem;
+}
+
+.button-theme {
+  position: absolute;
+  top: 3.75rem;
+  right: 3.75rem;
+
+  background-color: transparent;
+  border: transparent;
+  cursor: pointer;
+}
+
+#light-theme {
+  display: initial;
+
+  animation-name: rotation;
+  animation-duration: 2s;
+  animation-iteration-count: 5s;
+  animation-timing-function: initial;
+}
+
+#dark-theme {
+  display: none;
+
+  animation-name: rotation;
+  animation-duration: 2s;
+  animation-iteration-count: 5s;
+  animation-timing-function: initial;
 }
 
 .block-timer {
@@ -128,6 +166,14 @@ input:checked + .slider:before {
   cursor: pointer;
 }
 
+.standard-control-button {
+  display: initial;
+}
+
+.change-control-button {
+  display: none;
+}
+
 .music-buttons {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -164,12 +210,38 @@ input:checked + .slider:before {
   background: var(--selected);
 }
 
+.p-change-theme {
+  color: var(--background);
+}
+
 #default-button {
   display: initial;
 }
 
 #selected-button {
   display: none;
+}
+
+@keyframes rotation {
+  to {
+    transform: rotate(0deg);
+    /* opacity: 0.8; */
+  }
+  from {
+    transform: rotate(180deg);
+    /* opacity: 0; */
+  }
+}
+
+@keyframes changeColor {
+  0% {
+    background-color: #ffffff;
+    border-radius: 0%;
+  }
+  100% {
+    background-color: #000000;
+    border-radius: 50%;
+  }
 }
 
 @media only screen and (max-width: 950px) {
