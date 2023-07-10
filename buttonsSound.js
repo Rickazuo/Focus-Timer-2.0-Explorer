@@ -8,6 +8,7 @@ const musicFiles = {
 
 let selectedButton = null;
 let audio = null;
+// const volumeSlider = document.querySelector(".volume-slider input");
 
 buttons.forEach((button) => {
   button.addEventListener("click", () => {
@@ -34,3 +35,4 @@ buttons.forEach((button) => {
     audio.play();
   });
 });
+
